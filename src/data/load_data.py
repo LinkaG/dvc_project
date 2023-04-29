@@ -1,11 +1,9 @@
 from sklearn import datasets
 import pandas as pd
 import numpy as np
-import click
 
 
-@click.command()
-@click.argument("output_path", type=click.Path())
+
 def load_data(output_path: str):
     """ Function load init dataset.
     :param output_path: Path to save cleaned DataFrame
