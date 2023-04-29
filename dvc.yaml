@@ -1,8 +1,40 @@
 stages:
 
   load_data:
-    cmd: python src/data/load_data.py data/raw/iris.csv
+    cmd: python src/data/load_data.py ${dataset.output_folder}
     deps:
       - src/data/load_data.py
     outs:
-      - data/raw/iris.csv
+      - ${dataset.output_folder}
+
+  split_data:
+      cmd: python .\src\data\split_data.py ${dataset.output_folder} ${dataset.train_data_folder} ${dataset.train_labels_folder} ${dataset.test_data_folder} ${dataset.test_labels_folder}
+      deps:
+        - ${dataset.output_folder}
+        - src/data/split_data.py
+      outs:
+        - ${dataset.train_data_folder}
+        - ${dataset.train_labels_folder}
+        - ${dataset.test_data_folder}
+        - ${dataset.test_labels_folder}
+
+  train:
+      cmd: python src/model/train.py ${dataset.train_data_folder} ${dataset.train_labels_folder}  ${model.output_path}
+      deps:
+        - ${dataset.train_data_folder}
+        - ${dataset.train_labels_folder}
+        - src/model/train.py
+      outs:
+        - ${model.output_path}
+      params:
+        - model.params
+
+  evaluate:
+      cmd: python src/model/evaluate.py ${dataset.test_data_folder} ${dataset.test_labels_folder} ${model.output_path} ${evaluate.metrics}
+      deps:
+        - ${model.output_path}
+        - ${dataset.test_data_folder}
+        - ${dataset.test_labels_folder}
+        - src/model/evaluate.py
+      metrics:
+        - ${evaluate.metrics}

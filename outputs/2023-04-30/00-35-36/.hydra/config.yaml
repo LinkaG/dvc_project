@@ -1,0 +1,8 @@
+dataset:
+  output_folder: data/raw/iris.csv
+model:
+  _target_: sklearn.neighbors.KNeighborsClassifier
+  n_neighbors: 12
+  algorithm: auto
+  leaf_size: 30
+  p: 2

@@ -1,0 +1,6 @@
+model:
+  _target_: lightgbm.LGBMRegressor
+  n_neighbors: 12
+  algorithm: auto
+  leaf_size: 30
+  p: 2
