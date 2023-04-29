@@ -1,7 +1,7 @@
 [core]
     remote = remote
 ['remote "remote"']
-    url = s3://dvc
-    endpointurl = https://storage.yandexcloud.net
-    access_key_id = YCAJEDKLuBX7WScl_qCHcW7-z
-    secret_access_key = YCNZ9lMIn4AdyrLkYN4u2aM2dA0-sELbCmTCT44G
+    url = s3://dvcbucket
+    endpointurl = https://storage.yandexcloud.net/
+    access_key_id = YCAJEiXSSKgXWSOd88iF_fZyq
+    secret_access_key = YCOpr1fY1zezt0JG6RN5nAdTTQz4nvLpYuuiOfy5
