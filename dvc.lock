@@ -1,0 +1,12 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/data/load_data.py data/raw/iris.csv
+    deps:
+    - path: src/data/load_data.py
+      md5: 9b143bca7f3eeed7f338c92690077340
+      size: 575
+    outs:
+    - path: data/raw/iris.csv
+      md5: 53cd1fa405827a87fe3b5768e0a88ade
+      size: 3228

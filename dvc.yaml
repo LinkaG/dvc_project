@@ -1,0 +1,8 @@
+stages:
+
+  load_data:
+    cmd: python src/data/load_data.py data/raw/iris.csv
+    deps:
+      - src/data/load_data.py
+    outs:
+      - data/raw/iris.csv
