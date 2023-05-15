@@ -6,3 +6,4 @@
     url = s3://dvcbucket
     endpointurl = https://storage.yandexcloud.net
 
+

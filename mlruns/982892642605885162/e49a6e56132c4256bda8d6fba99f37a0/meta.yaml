@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/982892642605885162/e49a6e56132c4256bda8d6fba99f37a0/artifacts
+end_time: 1684145239851
+entry_point_name: ''
+experiment_id: '982892642605885162'
+lifecycle_stage: active
+run_id: e49a6e56132c4256bda8d6fba99f37a0
+run_name: lyrical-finch-817
+run_uuid: e49a6e56132c4256bda8d6fba99f37a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684145239708
+status: 3
+tags: []
+user_id: DNS

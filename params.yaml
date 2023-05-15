@@ -6,9 +6,10 @@ dataset:
   test_labels_folder: data/processed/test_labels.csv
 model:
   params:
-    _target_: sklearn.linear_model.LogisticRegression
-    penalty: l2
-    solver: liblinear
-  output_path: models/logreg.pkl
+    _target_: sklearn.svm.SVC
+    kernel: rbf
+    gamma: 0.2
+    C: 1.0
+  output_path: models/svm.pkl
 evaluate:
   metrics: data/processed/metrics.json

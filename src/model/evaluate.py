@@ -14,7 +14,7 @@ import mlflow
 @click.argument("model_path", type=click.Path())
 @click.argument("output_path", type=click.Path())
 def evaluate(input_path_data: str, input_path_label: str, model_path: str, output_path: str):
-    mlflow.set_experiment("logreg classifier")
+    mlflow.set_experiment("svm classifier")
 
 
     yaml = YAML(typ="safe")
