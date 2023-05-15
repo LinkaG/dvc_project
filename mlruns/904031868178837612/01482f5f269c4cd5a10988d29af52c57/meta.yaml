@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/904031868178837612/01482f5f269c4cd5a10988d29af52c57/artifacts
+end_time: 1684144370029
+entry_point_name: ''
+experiment_id: '904031868178837612'
+lifecycle_stage: active
+run_id: 01482f5f269c4cd5a10988d29af52c57
+run_name: aged-mink-330
+run_uuid: 01482f5f269c4cd5a10988d29af52c57
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684144369880
+status: 3
+tags: []
+user_id: DNS

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/249875972070916035/3fe02c2d753e406d9f52c0a25c6c4574/artifacts
+end_time: 1684143768678
+entry_point_name: ''
+experiment_id: '249875972070916035'
+lifecycle_stage: active
+run_id: 3fe02c2d753e406d9f52c0a25c6c4574
+run_name: wise-fly-596
+run_uuid: 3fe02c2d753e406d9f52c0a25c6c4574
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684143768562
+status: 3
+tags: []
+user_id: DNS

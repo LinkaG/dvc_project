@@ -34,7 +34,7 @@ stages:
       md5: bd3a452fc5458035f6ca8f52311ae47e
       size: 508
   train:
-    cmd: python src/model/train.py data/processed/train_data.csv data/processed/train_labels.csv  models/knn.pkl
+    cmd: python src/model/train.py data/processed/train_data.csv data/processed/train_labels.csv  models/logreg.pkl
     deps:
     - path: data/processed/train_data.csv
       md5: 84126e8c7beddacaf277b8e64c9646f6
@@ -48,18 +48,16 @@ stages:
     params:
       params.yaml:
         model.params:
-          _target_: sklearn.neighbors.KNeighborsClassifier
-          n_neighbors: 5
-          algorithm: auto
-          leaf_size: 30
-          p: 2
+          _target_: sklearn.linear_model.LogisticRegression
+          penalty: l2
+          solver: liblinear
     outs:
-    - path: models/knn.pkl
-      md5: 4cf847df54de376d4dfa4a6eb4a69adc
-      size: 9718
+    - path: models/logreg.pkl
+      md5: cf60c0c1cede2a8c091c9326821cff6e
+      size: 1363
   evaluate:
     cmd: python src/model/evaluate.py data/processed/test_data.csv data/processed/test_labels.csv
-      models/knn.pkl data/processed/metrics.json
+      models/logreg.pkl data/processed/metrics.json
     deps:
     - path: data/processed/test_data.csv
       md5: ec8cc2a05942eadc8bb17b2e0a0e69d8
@@ -67,13 +65,13 @@ stages:
     - path: data/processed/test_labels.csv
       md5: a14b578b5699abc569206b6e18237fa8
       size: 258
-    - path: models/knn.pkl
-      md5: 4cf847df54de376d4dfa4a6eb4a69adc
-      size: 9718
+    - path: models/logreg.pkl
+      md5: cf60c0c1cede2a8c091c9326821cff6e
+      size: 1363
     - path: src/model/evaluate.py
-      md5: f299df025caa8e8b826713d820cc6e69
-      size: 836
+      md5: d5dd03eb0dcc30ecfbe49cde44528363
+      size: 1112
     outs:
     - path: data/processed/metrics.json
-      md5: b5ba27dd8973604ec4cdba0df3a51de9
-      size: 26
+      md5: ce3618d86a47cfba7d4c112ac4a2d677
+      size: 25

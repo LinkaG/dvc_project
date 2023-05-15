@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/249875972070916035/d674bfae7b8d464ea71ef368320e82d7/artifacts
+end_time: 1684143691345
+entry_point_name: ''
+experiment_id: '249875972070916035'
+lifecycle_stage: active
+run_id: d674bfae7b8d464ea71ef368320e82d7
+run_name: overjoyed-zebra-32
+run_uuid: d674bfae7b8d464ea71ef368320e82d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684143691228
+status: 3
+tags: []
+user_id: DNS

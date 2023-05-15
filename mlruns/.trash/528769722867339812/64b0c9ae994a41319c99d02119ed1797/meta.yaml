@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/528769722867339812/64b0c9ae994a41319c99d02119ed1797/artifacts
+deleted_time: 1684143656890
+end_time: 1684143563935
+entry_point_name: ''
+experiment_id: '528769722867339812'
+lifecycle_stage: deleted
+run_id: 64b0c9ae994a41319c99d02119ed1797
+run_name: indecisive-shark-974
+run_uuid: 64b0c9ae994a41319c99d02119ed1797
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684143563451
+status: 3
+tags: []
+user_id: DNS

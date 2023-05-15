@@ -6,11 +6,9 @@ dataset:
   test_labels_folder: data/processed/test_labels.csv
 model:
   params:
-    _target_: sklearn.neighbors.KNeighborsClassifier
-    n_neighbors: 5
-    algorithm: auto
-    leaf_size: 30
-    p: 2
-  output_path: models/knn.pkl
+    _target_: sklearn.linear_model.LogisticRegression
+    penalty: l2
+    solver: liblinear
+  output_path: models/logreg.pkl
 evaluate:
   metrics: data/processed/metrics.json
