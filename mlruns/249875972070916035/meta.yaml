@@ -1,6 +1,0 @@
-artifact_location: file:///C:/Users/DNS/Desktop/dvc_project/mlruns/249875972070916035
-creation_time: 1684143690350
-experiment_id: '249875972070916035'
-last_update_time: 1684143690350
-lifecycle_stage: active
-name: knn classifier
