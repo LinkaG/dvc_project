@@ -43,8 +43,8 @@ stages:
       md5: bd3a452fc5458035f6ca8f52311ae47e
       size: 508
     - path: src/model/train.py
-      md5: 11abb8847e2d764769f22188598fd234
-      size: 927
+      md5: cb2d48dbdfe7fa32fc7981fee67b0afd
+      size: 1607
     params:
       params.yaml:
         model.params:
@@ -54,8 +54,8 @@ stages:
           C: 1.0
     outs:
     - path: models/svm.pkl
-      md5: 03ce706728803cbf1e8161e933229ab2
-      size: 4691
+      md5: 3a03abb7b73eb7546de969ec83d33599
+      size: 4743
   evaluate:
     cmd: python src/model/evaluate.py data/processed/test_data.csv data/processed/test_labels.csv
       models/svm.pkl data/processed/metrics.json
@@ -67,11 +67,11 @@ stages:
       md5: a14b578b5699abc569206b6e18237fa8
       size: 258
     - path: models/svm.pkl
-      md5: 03ce706728803cbf1e8161e933229ab2
-      size: 4691
+      md5: 3a03abb7b73eb7546de969ec83d33599
+      size: 4743
     - path: src/model/evaluate.py
-      md5: dda6c657a22783d645369891aefa0b65
-      size: 1109
+      md5: bdd4e7e1282ac2267b01f3bf2c321f65
+      size: 1257
     outs:
     - path: data/processed/metrics.json
       md5: ce3618d86a47cfba7d4c112ac4a2d677

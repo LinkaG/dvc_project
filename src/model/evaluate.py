@@ -8,13 +8,17 @@ import mlflow
 
 
 
+
 @click.command()
 @click.argument("input_path_data", type=click.Path())
 @click.argument("input_path_label", type=click.Path())
 @click.argument("model_path", type=click.Path())
 @click.argument("output_path", type=click.Path())
 def evaluate(input_path_data: str, input_path_label: str, model_path: str, output_path: str):
-    mlflow.set_experiment("svm classifier")
+    mlflow.set_tracking_uri("http://188.227.32.199/mlflow")
+
+    mlflow.set_experiment("svm classifier1")
+    mlflow.start_run(run_name ="тестирование")
 
 
     yaml = YAML(typ="safe")
